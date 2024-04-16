@@ -183,7 +183,7 @@ let clearCodes = [ClearCode.TURN_BY_TURN, ClearCode.SAFETY, ClearCode.SPEEDING, 
 MConHudSdk.shared.sendClear(clearCodes: clearCodes)
 ```
 
-## Current Time Message
+## Time Message
 Transmitting the current time as a String, utilizing the date and time format yyyyMMddHHmmss.
 
 ```swift
