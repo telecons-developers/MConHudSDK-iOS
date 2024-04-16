@@ -124,7 +124,7 @@ MConHudSdk.shared.sendSafetyInfo(safetyCodes: safetyCodes, remainDistance: 100)
 ```
 
 ## Speeding Message
-과속 상태를 표현하는 메세지 입니다.
+과속 상태를 표현하는 메세지 입니다.  
 provide the speed limit and the speeding condition values to convey the message
 
 ```swift
@@ -132,7 +132,7 @@ MConHudSdk.shared.sendSpeedingInfo(limitSpeed: 70, isSpeeding: true)
 ```
 
 ## Car Speed Message
-자차 속도 메세지 입니다.
+자차 속도 메세지 입니다.  
 Speed is used to represent the vehicle's velocity as an integer type.
 
 ```swift
