@@ -4,7 +4,7 @@
 
 
 
-<img src=https://img.shields.io/badge/{ label }-{ message }-{ color }.svg?{ style(optional)/>
+<img src="https://img.shields.io/badge/{ label }-{ message }-{ color }.svg?{ style(optional)"/>
 
 # Installation
 Swift Package Manager 배포
