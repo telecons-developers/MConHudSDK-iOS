@@ -132,7 +132,7 @@ provide the speed limit and the speeding condition values to convey the message
 ```swift
 MConHudSdk.shared.sendSpeedingInfo(limitSpeed: 70, isSpeeding: true)
 ```
-## JunctionViews Message
+## Junction Views Message
 
 ```swift
 let JunctionViewCodes = [JunctionViewCode.SERVICE_LANE]
