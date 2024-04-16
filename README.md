@@ -2,6 +2,7 @@
 <div align="left">
   <img src="https://img.shields.io/badge/Swift-F05138?style=plastic&logo=Swift&logoColor=white"/>
   <img src="https://img.shields.io/badge/version-1.0-blue.svg"/>
+  <img src="https://img.shields.io/badge/version-1.0-blue.svg"/>
   
 </div>
 <div style="border-radius: 12px; overflow: hidden;">
