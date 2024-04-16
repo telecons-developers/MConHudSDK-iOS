@@ -176,7 +176,7 @@ let clearCodes = [ClearCode.TURN_BY_TURN, ClearCode.SAFETY]
 MConHudSdk.shared.sendClear(clearCodes: clearCodes)
 ```
 
-If an 'All Clear' indication is required, the ClearCode should be summed and sent.
+If an 'All Clear' indication is required, the value for ClearCode should be provided as an array.
 
 ```swift
 let clearCodes = [ClearCode.TURN_BY_TURN, ClearCode.SAFETY, ClearCode.SPEEDING, ClearCode.JUNCTION_VIEWS, ClearCode.GPS_SPEED, ClearCode.FUEL]
