@@ -83,11 +83,13 @@ extension ViewController: MConHudScanDelegate {
 
 ## Bluetooth Disconnect Device
 Bluetooth connection will be disconnected once turn off HUD device's power or call the following code. 
+
 ```swift
 MConHudKit.shared.disconnectPeripheral(peripheral: peripheral)
 ```
 
 You are to receive a disconnection signal through disconnectedPeripheral when the connection is terminated.
+
 ```swift
 extension ViewController: MConHudScanDelegate {
     func disconnectedPeripheral() {
@@ -98,6 +100,7 @@ extension ViewController: MConHudScanDelegate {
 
 ## Turn By Turn Message
 방향과 잔여거리를 전송합니다.
+
 ```swift
 let turnByTurnCode: TurnByTurnCode = .STRAIGHT
 // distance unit is meter.
@@ -114,12 +117,36 @@ MConHudSdk.shared.sendSafetyInfo(safetyCodes: safetyCodes, remainDistance: 100)
 ```
 
 If multiple safety indicators need to be displayed simultaneously, provide the value for safetyCode in the form of an array.
+
 ```swift
 let safetyCodes = [SafetyCode.TRAFFIC_MONITORING_AREA, SafetyCode.SPEED_BREAKER]
 MConHudSdk.shared.sendSafetyInfo(safetyCodes: safetyCodes, remainDistance: 100)
 ```
 
-## 
+## Speeding Message
+과속 상태를 표현하는 메세지 입니다.
+provide the speed limit and the speeding condition values to convey the message
+
+```swift
+MConHudSdk.shared.sendSpeedingInfo(limitSpeed: 70, isSpeeding: true)
+```
+
+## Car Speed Message
+자차 속도 메세지 입니다.
+Speed is used to represent the vehicle's velocity as an integer type.
+
+```swift
+let speed = 100
+MConHudSdk.shared.sendCarSpeed(speed: speed)
+```
+
+## Fuel Message
+연료타입 메세지 입니다.
+
+```swift
+MConHudSdk.shared.sendFuel(fuelCode: .FUEL_PUMP)
+```
+
 
 
 
