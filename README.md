@@ -138,7 +138,7 @@ MConHudSdk.shared.sendSpeedingInfo(limitSpeed: 70, isSpeeding: true)
 let JunctionViewCodes = [JunctionViewCode.SERVICE_LANE]
 MConHudSdk.shared.sendJunctionViewInfo(JunctionViewCodes: JunctionViewCodes)
 ```
-If multiple safety indicators need to be displayed simultaneously, the value for JunctionViewCode should be provided as an array.
+If multiple JunctionView indicators need to be displayed simultaneously, the value for JunctionViewCode should be provided as an array.
 
 ```swift
 let JunctionViewCodes = [JunctionViewCode.SERVICE_LANE, JunctionViewCode.UNDERPASS]
@@ -160,6 +160,29 @@ MConHudSdk.shared.sendCarSpeed(speed: speed)
 ```swift
 MConHudSdk.shared.sendFuel(fuelCode: .FUEL_PUMP)
 ```
+
+## Clear Message
+소등 메세지
+
+```swift
+let clearCodes = [ClearCode.TURN_BY_TURN]
+MConHudSdk.shared.sendClear(clearCodes: clearCodes)
+```
+
+If multiple Clear indicators need to be displayed simultaneously, the value for ClearCode should be provided as an array.
+
+```swift
+let clearCodes = [ClearCode.TURN_BY_TURN, ClearCode.SAFETY]
+MConHudSdk.shared.sendClear(clearCodes: clearCodes)
+```
+
+If an 'All Clear' indication is required, the ClearCode should be summed and sent.
+
+```swift
+let clearCodes = [ClearCode.TURN_BY_TURN, ClearCode.SAFETY, ClearCode.SPEEDING, ClearCode.JUNCTION_VIEWS, ClearCode.GPS_SPEED, ClearCode.FUEL]
+MConHudSdk.shared.sendClear(clearCodes: clearCodes)
+```
+
 ## Hud Brightness
 Change the brightness of HUD
 
