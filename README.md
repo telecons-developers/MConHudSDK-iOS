@@ -3,9 +3,6 @@
 <img src="https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=Swift&logoColor=white"/>
 
 
-
-<img src="https://img.shields.io/badge/{ label }-{ message }-{ color }.svg?{ style(optional)"/>
-
 # Installation
 Swift Package Manager 배포
 
