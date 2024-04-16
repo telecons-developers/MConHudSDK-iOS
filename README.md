@@ -106,14 +106,20 @@ MConHudSdk.shared.sendTurnByTurnInfo(tbtCode: .STRAIGHT, distance: distance)
 ```
 
 ## Safety Message
+Provide an array of camera types to be flashed, along with the remaining distance in meters
 
 ```swift
-let safetyCodes = [SafetyCode.TRAFFIC_MONITORING_AREA, SafetyCode.SPEED_BREAKER]
-MConHudSdk.shared.sendSafetyInfo(safetyCodes: safetyCodes,        // Provide the types of cameras to be flashed in the form of an array.
-                                             remainDistance: 100  // Remaining distance (m)
-)
+let safetyCodes = [SafetyCode.TRAFFIC_MONITORING_AREA]
+MConHudSdk.shared.sendSafetyInfo(safetyCodes: safetyCodes, remainDistance: 100)
 ```
 
+If multiple safety indicators need to be displayed simultaneously, provide the value for safetyCode in the form of an array.
+```swift
+let safetyCodes = [SafetyCode.TRAFFIC_MONITORING_AREA, SafetyCode.SPEED_BREAKER]
+MConHudSdk.shared.sendSafetyInfo(safetyCodes: safetyCodes, remainDistance: 100)
+```
+
+## 
 
 
 
