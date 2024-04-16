@@ -147,6 +147,7 @@ MConHudSdk.shared.sendCarSpeed(speed: speed)
 연료타입 메세지 입니다.
 
 ```swift
+// has a FUEL_PUMP or EV_CHARGING
 MConHudSdk.shared.sendFuel(fuelCode: .FUEL_PUMP)
 ```
 ## Hud Brightness
