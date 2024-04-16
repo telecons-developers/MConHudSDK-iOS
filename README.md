@@ -4,7 +4,7 @@
   <img src="https://img.shields.io/badge/Platform-iOS-orange.svg"/> 
   <img src="https://img.shields.io/badge/Swift-5-orange.svg"/>  
   <img src="https://img.shields.io/badge/iOS-15.0-orange.svg"/>  
-  <img src="https://img.shields.io/badge/Release-1.0-blue.svg"/>  
+  <img src="https://img.shields.io/badge/Release-v1.0-blue.svg"/>  
   <img src="https://img.shields.io/badge/License-MIT-lightgray.svg"/>     
 </div>
 
