@@ -132,6 +132,18 @@ provide the speed limit and the speeding condition values to convey the message
 ```swift
 MConHudSdk.shared.sendSpeedingInfo(limitSpeed: 70, isSpeeding: true)
 ```
+## Junction Views
+
+```swift
+let JunctionViewCodes = [JunctionViewCode.SERVICE_LANE]
+MConHudSdk.shared.sendJunctionViewInfo(JunctionViewCodes: JunctionViewCodes)
+```
+If multiple safety indicators need to be displayed simultaneously, the value for JunctionViewCode should be provided as an array.
+
+```swift
+let JunctionViewCodes = [JunctionViewCode.SERVICE_LANE, JunctionViewCode.UNDERPASS]
+MConHudSdk.shared.sendJunctionViewInfo(JunctionViewCodes: JunctionViewCodes)
+```
 
 ## Car Speed Message
 자차 속도 메세지 입니다.  
