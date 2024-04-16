@@ -2,10 +2,10 @@
 <div align="left">
   <img src="https://img.shields.io/badge/Swift-FA7343?style=flat&logo=swift&logoColor=white"/>
   <img src="https://img.shields.io/badge/Platform-iOS-orange.svg"/> 
-  <img src="https://img.shields.io/badge/Swift-5-blue.svg"/>  
-  <img src="https://img.shields.io/badge/iOS-15.0-blue.svg"/>  
+  <img src="https://img.shields.io/badge/Swift-5-orange.svg"/>  
+  <img src="https://img.shields.io/badge/iOS-15.0-orange.svg"/>  
   <img src="https://img.shields.io/badge/Release-1.0-blue.svg"/>  
-  <img src="https://img.shields.io/badge/License-MIT-blue.svg"/>     
+  <img src="https://img.shields.io/badge/License-MIT-gray.svg"/>     
 </div>
 
 ## Installation
