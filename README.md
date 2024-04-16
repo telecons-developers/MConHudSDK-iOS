@@ -17,7 +17,7 @@ Privacy - Bluetooth Peripheral Usage Description
 ```
 
 # Auth
-AppKey 인증을 완료해 주세요.
+AppKey 인증을 완료해 주세요.
 
 ```
 MConHudSdk.shared.initialize(appKey: "appkey") { error in
