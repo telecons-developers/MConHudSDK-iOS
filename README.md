@@ -5,10 +5,10 @@
   <img src="https://img.shields.io/badge/Platform-iOS-orange.svg"/>  
 </div>
 
-# Installation
+## Installation
 Swift Package Manager 배포
 
-# Authorization
+## Authorization
 Need Bluetooth Authorization Add in info.plist
 
 ```
@@ -16,7 +16,7 @@ Privacy - Bluetooth Always Usage Description
 Privacy - Bluetooth Peripheral Usage Description
 ```
 
-# Auth
+## Auth
 AppKey 인증을 완료해 주세요.
 
 ```swift
