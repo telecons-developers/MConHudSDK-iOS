@@ -15,3 +15,16 @@ Need Bluetooth Authorization Add in info.plist
 Privacy - Bluetooth Always Usage Description
 Privacy - Bluetooth Peripheral Usage Description
 ```
+
+# Auth
+AppKey 인증을 완료해 주세요.
+
+```
+MConHudSdk.shared.initialize(appKey: "appkey") { error in
+  if let error = error {
+    print("authorization fail \(error)")
+    return
+  }
+  print("authorization success")
+}
+```
