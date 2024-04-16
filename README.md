@@ -28,3 +28,35 @@ MConHudSdk.shared.initialize(appKey: "appkey") { error in
   print("authorization success")
 }
 ```
+
+## Scan Device
+```swift
+// ViewController.swift
+class ViewController: UIViewController {
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    // Set Scan delegate
+    MConHudKit.shared.hudScanDelegate = self
+    // The Scanner will be automatically terminated after timeoutSec.
+    // The Scanner will NOT be terminated if you pass nil to timeoutSec.
+    MConHudKit.shared.startScanPeripheral(timeoutSec: 7)
+  }
+}
+extension ViewController: MConHudScanDelegate {
+    func scanPeripheral(peripherals: [MConHudPeripheral]) {
+        peripherals.forEach { item in
+            print(item.name)    // Device Name
+            print(item.uuid)    // Device Identifier UUID
+            print(item.rssi)    // Device Bluetooth rssi
+            print(item.paired)  // Device Bluetooth Connect Status (Not BLE Connection)
+        }
+    }
+
+    func scanTimeOut() {
+        print("Scan time out. Scan end.")
+    }
+    func error(error: MConHudKitError) {
+        print(error)
+    }
+}
+```
