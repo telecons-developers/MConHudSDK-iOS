@@ -1,6 +1,6 @@
 # MConHudSDK-iOS
 <img src="https://img.shields.io/badge/version-0.0.1-critical.svg"/>
-<img src="https://img.shields.io/badge/swift-#F05138?style=flat&logo=swift&logoColor=white"/>
+<img src="https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=Swift&logoColor=white"/>
 
 
 # Installation
