@@ -166,6 +166,7 @@ class ViewController: UIViewController {
     super.viewDidLoad()
 
     MConHudSdk.shared.hudDelegate = self
+    MConHudSdk.shared.getHudBrightnessLevel()
   }
 }
 
@@ -173,7 +174,44 @@ extension ViewController: MConHudDelegate {
     func receiveHudBrightnessLevel(brightnessLevel: MConHudSDK.BrightnessLevel) {
         print("receiveHudBrightnessLevel \(brightnessLevel)")
     }
+
+    ...
 }
 ```
+
+## Hud Buzzer
+Change the beep sound volume of HUD.
+
+```swift
+// has a MUTE, LOW, MEDIUM, HIGH
+let buzzerLevel: BuzzerLevel = .LOW
+MConHudSdk.shared.sendHudBuzzerLevel(buzzerLevel: buzzerLevel)
+```
+
+Fetch the current status information for HUD's buzzer status, retrieving only the on/off state and excluding the levels of LOW, MEDIUM, or HIGH.
+
+```swift
+class ViewController: UIViewController {
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+    MConHudSdk.shared.hudDelegate = self
+    MConHudSdk.shared.getHudBuzzerLevel()
+  }
+}
+
+extension ViewController: MConHudDelegate {
+    func receiveHudBuzzerStatus(buzzerStatus: MConHudSDK.BuzzerLevel) {
+        print("receiveHudBuzzerStatus \(buzzerStatus)")
+    }
+
+    ...
+}
+```
+
+
+
+
+
 
 
