@@ -6,7 +6,7 @@
 </div>
 
 ## Installation
-################ Swift Package Manager 배포
+Swift Package Manager 배포
 
 ## Authorization
 Need Bluetooth Authorization Add in info.plist
@@ -146,7 +146,31 @@ MConHudSdk.shared.sendCarSpeed(speed: speed)
 ```swift
 MConHudSdk.shared.sendFuel(fuelCode: .FUEL_PUMP)
 ```
+## Hud Brightness
+Change the brightness of HUD
 
+```swift
+// has a LOW, MEDIUM, HIGH
+let brightnessLevel: BrightnessLevel = .LOW
+MConHudSdk.shared.sendHudBrightnessLevel(brightnessLevel: brightnessLevel)
+```
 
+Fetch the current status information for HUD's brightness status.
+
+```swift
+class ViewController: UIViewController {
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+    MConHudSdk.shared.hudDelegate = self
+  }
+}
+
+extension ViewController: MConHudDelegate {
+    func receiveHudBrightnessLevel(brightnessLevel: MConHudSDK.BrightnessLevel) {
+        print("receiveHudBrightnessLevel \(brightnessLevel)")
+    }
+}
+```
 
 
