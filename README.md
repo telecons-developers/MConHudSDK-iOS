@@ -104,7 +104,6 @@ extension ViewController: MConHudScanDelegate {
 방향과 잔여거리를 전송합니다.
 
 ```swift
-// has a STRAIGHT, SHARP_LEFT_TURN, LEFT_TURN, SLIGHT_LEFT_TURN, SLIGHT_RIGHT_TURN, RIGHT_TURN, SHARP_RIGHT_TURN, LEFT_U_TURN, RIGHT_U_TURN
 let turnByTurnCode: TurnByTurnCode = .STRAIGHT
 // distance unit is meter.
 let distance = 200
@@ -147,14 +146,12 @@ MConHudSdk.shared.sendCarSpeed(speed: speed)
 연료타입 메세지 입니다.
 
 ```swift
-// has a FUEL_PUMP or EV_CHARGING
 MConHudSdk.shared.sendFuel(fuelCode: .FUEL_PUMP)
 ```
 ## Hud Brightness
 Change the brightness of HUD
 
 ```swift
-// has a LOW, MEDIUM, HIGH
 let brightnessLevel: BrightnessLevel = .LOW
 MConHudSdk.shared.sendHudBrightnessLevel(brightnessLevel: brightnessLevel)
 ```
@@ -184,7 +181,6 @@ extension ViewController: MConHudDelegate {
 Change the beep sound volume of HUD.
 
 ```swift
-// has a MUTE, LOW, MEDIUM, HIGH
 let buzzerLevel: BuzzerLevel = .LOW
 MConHudSdk.shared.sendHudBuzzerLevel(buzzerLevel: buzzerLevel)
 ```
