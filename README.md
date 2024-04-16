@@ -95,3 +95,18 @@ extension ViewController: MConHudScanDelegate {
     }
 }
 ```
+
+## Turn By Turn Message
+방향과 잔여거리를 전송합니다.
+```swift
+let turnByTurnCode: TurnByTurnCode = .STRAIGHT
+// distance unit is meter.
+let distance = 200
+MConHudSdk.shared.sendTurnByTurnInfo(tbtCode: .STRAIGHT, distance: distance)
+```
+
+
+
+
+
+
