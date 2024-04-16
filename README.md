@@ -104,6 +104,7 @@ extension ViewController: MConHudScanDelegate {
 방향과 잔여거리를 전송합니다.
 
 ```swift
+// has a STRAIGHT, SHARP_LEFT_TURN, LEFT_TURN, SLIGHT_LEFT_TURN, SLIGHT_RIGHT_TURN, RIGHT_TURN, SHARP_RIGHT_TURN, LEFT_U_TURN, RIGHT_U_TURN
 let turnByTurnCode: TurnByTurnCode = .STRAIGHT
 // distance unit is meter.
 let distance = 200
