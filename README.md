@@ -38,10 +38,10 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     // Set Scan delegate
-    MConHudKit.shared.hudScanDelegate = self
+    MConHudSdk.shared.hudScanDelegate = self
     // The Scanner will be automatically terminated after timeoutSec.
     // The Scanner will NOT be terminated if you pass nil to timeoutSec.
-    MConHudKit.shared.startScanPeripheral(timeoutSec: 7)
+    MConHudSdk.shared.startScanPeripheral(timeoutSec: 7)
   }
 }
 extension ViewController: MConHudScanDelegate {
@@ -57,7 +57,7 @@ extension ViewController: MConHudScanDelegate {
     func scanTimeOut() {
         print("Scan time out. Scan end.")
     }
-    func error(error: MConHudKitError) {
+    func error(error: MConHudSdkError) {
         print(error)
     }
 }
@@ -66,7 +66,7 @@ extension ViewController: MConHudScanDelegate {
 ## Bluetooth Connect Device
 ```swift
 // peripheral is MConHudPeripheral
-MConHudKit.shared.connectPeripheral(peripheral: peripheral)
+MConHudSdk.shared.connectPeripheral(peripheral: peripheral)
 ```
 
 ```swift
@@ -76,7 +76,7 @@ extension ViewController: MConHudScanDelegate {
         // Connect Success
     }
 
-    func error(error: MConHudKitError) {
+    func error(error: MConHudSdkError) {
         // Connect Fail
         print(error)
     }
@@ -87,7 +87,7 @@ extension ViewController: MConHudScanDelegate {
 Bluetooth connection will be disconnected once turn off HUD device's power or call the following code. 
 
 ```swift
-MConHudKit.shared.disconnectPeripheral(peripheral: peripheral)
+MConHudSdk.shared.disconnectPeripheral(peripheral: peripheral)
 ```
 
 You are to receive a disconnection signal through disconnectedPeripheral when the connection is terminated.
