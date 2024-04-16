@@ -112,10 +112,6 @@ let safetyCodes = [SafetyCode.TRAFFIC_MONITORING_AREA, SafetyCode.SPEED_BREAKER]
 MConHudSdk.shared.sendSafetyInfo(safetyCodes: safetyCodes,        // Provide the types of cameras to be flashed in the form of an array.
                                              remainDistance: 100  // Remaining distance (m)
 )
-
-MConHudSdk.shared.sendSafetyInfo(safetyCodes: safetyCodes,  // Provide the types of cameras to be flashed in the form of an array.
-                                             remainDistance: 100 // Remaining distance (m)
-            )
 ```
 
 
