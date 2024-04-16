@@ -183,6 +183,21 @@ let clearCodes = [ClearCode.TURN_BY_TURN, ClearCode.SAFETY, ClearCode.SPEEDING, 
 MConHudSdk.shared.sendClear(clearCodes: clearCodes)
 ```
 
+## Current Time Message
+Transmitting the current time as a String, utilizing the date and time format yyyyMMddHHmmss.
+
+```swift
+let yyyyMMddHHmmss = getCurrentDateTime()
+MConHudSdk.shared.sendTime(yyyyMMddHHmmss: yyyyMMddHHmmss)
+
+func getCurrentDateTime() -> String {
+  let date = Date()
+  let dateFormatter = DateFormatter()
+  dateFormatter.dateFormat = "yyyyMMddHHmmss"
+  return dateFormatter.string(from: date)
+}
+```
+
 ## Hud Brightness
 Change the brightness of HUD
 
