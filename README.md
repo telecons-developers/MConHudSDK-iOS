@@ -1,6 +1,8 @@
 # MConHudSDK-iOS
 <div align="left">
-  <img src="https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=Swift&logoColor=white"/>
+  <div style="border-radius: 12px; overflow: hidden;">
+    <img src="https://img.shields.io/badge/Swift-F05138?style=flat-square&logo=Swift&logoColor=white"/>
+</div>
   <img src="https://img.shields.io/badge/version-1.0-blue.svg"/>
   
 </div>
