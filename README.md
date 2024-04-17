@@ -8,7 +8,7 @@
 </div>
 
 ## Installation
-Swift Package Manager 배포
+
 
 ## Authorization
 Need Bluetooth Authorization Add in info.plist
