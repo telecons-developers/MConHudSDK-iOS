@@ -235,7 +235,7 @@ let buzzerLevel: BuzzerLevel = .LOW
 MConHudSdk.shared.sendHudBuzzerLevel(buzzerLevel: buzzerLevel)
 ```
 
-Fetch the current status information for HUD's buzzer status, retrieving only the on/off state and excluding the levels of LOW, MEDIUM, or HIGH.
+Fetch the current status information for HUD's buzzer status, retrieving only the on/off state and excluding the levels of MUTE, LOW, MEDIUM, HIGH.
 
 ```swift
 class ViewController: UIViewController {
