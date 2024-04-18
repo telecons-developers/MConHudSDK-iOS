@@ -8,7 +8,7 @@
 </div>
 
 ## 목차
-- [Firmware Update](#section-6)
+- [Firmware Update](#Firmware-Update)
 
 ## Installation
 
