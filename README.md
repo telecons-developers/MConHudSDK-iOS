@@ -7,7 +7,7 @@
   <img src="https://img.shields.io/badge/License-MIT-lightgray.svg"/>     
 </div>
 
-## 목차
+## Table of Contents
 - [Installation](#Installation)
 - [Authorization](#Authorization)
 - [Auth](#Auth)
