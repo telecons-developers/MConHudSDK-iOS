@@ -257,7 +257,45 @@ extension ViewController: MConHudDelegate {
 ```
 
 ## Firmware Update
+```swift
+MConHudSdk.shared.startFirmwareUpdate(
+    firmwareFileURL: downloadFileURL,    // 펌웨어 파일 경로
+    deviceName: "MHUD",                  // HUD의 블루투스 스캔 기기명
+    version: "212201",                   // 업데이트 할 펌웨어 버전
+    fileSize: 794192,                    // 펌웨어 파일의 사이즈
+    updateType: 0,                       // 펌웨어 업데이트 타입 (0: 일반 업데이트, 1: 강제 업데이트)
+    crcValue: "0x5699"                   // 체크썸
+)
+```
+[MConHudFirmwareDelegate]를 통해 현재 펌웨어 정보와 펌웨어 업데이트 진행 및 완료 상태를 받을 수 있습니다.
 
+```swift
+class ViewController: UIViewController {
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+    MConHudSdk.shared.hudFirmwareDelegate = self
+  }
+}
+
+extension ViewController: MConHudFirmwareDelegate {
+    func receiveFirmwareInfo(firmwareInfo: FirmwareInfo) {
+        print("[MConHudFirmwareDelegate] receiveFirmwareInfo : \(firmwareInfo)")
+    }
+    
+    func firmwareUpdate(progress: Int) {
+        print("[MConHudFirmwareDelegate] prog : \(progress)")
+    }
+    
+    func firmwareUpdateComplete() {
+        print("[MConHudFirmwareDelegate] firmwareUpdateComplete")
+    }
+    
+    func firmwareUpdateError(firmwareUpdateError: MConHudSdkError) {
+        print("[MConHudFirmwareDelegate] \(firmwareUpdateError)")
+    }
+}
+```
 
 
 
