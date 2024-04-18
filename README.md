@@ -4,7 +4,6 @@
   <img src="https://img.shields.io/badge/Platform-iOS_v15.0-orange.svg"/> 
   <img src="https://img.shields.io/badge/Swift-5-orange.svg"/>    
   <img src="https://img.shields.io/badge/Release-v1.0-blue.svg"/>  
-  <img src="https://img.shields.io/badge/License-MIT-lightgray.svg"/>     
 </div>
 
 ## Table of Contents
