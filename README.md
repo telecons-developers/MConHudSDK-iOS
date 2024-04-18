@@ -7,6 +7,9 @@
   <img src="https://img.shields.io/badge/License-MIT-lightgray.svg"/>     
 </div>
 
+## 목차
+- [Firmware Update](#section-6)
+
 ## Installation
 
 
