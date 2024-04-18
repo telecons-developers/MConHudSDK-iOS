@@ -198,7 +198,7 @@ func getCurrentDateTime() -> String {
 }
 ```
 
-## Hud Brightness
+## HUD Brightness
 Change the brightness of HUD
 
 ```swift
@@ -227,7 +227,7 @@ extension ViewController: MConHudDelegate {
 }
 ```
 
-## Hud Buzzer
+## HUD Buzzer
 Change the beep sound volume of HUD.
 
 ```swift
