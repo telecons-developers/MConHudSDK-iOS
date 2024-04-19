@@ -217,6 +217,26 @@ func getCurrentDateTime() -> String {
 }
 ```
 
+If the HUD requires time updates, events are delivered through [MConHudDelegate].
+
+```swift
+class ViewController: UIViewController {
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+    MConHudSdk.shared.hudDelegate = self
+  }
+}
+
+extension ViewController: MConHudDelegate {
+    func receiveHudTime() {
+        print("receiveHudTime")
+    }
+
+    ...
+}
+```
+
 ## HUD Brightness
 Change the brightness of HUD
 
