@@ -126,7 +126,7 @@ extension ViewController: MConHudScanDelegate {
 let turnByTurnCode: TurnByTurnCode = .STRAIGHT
 // distance unit is meter.
 let distance = 200
-MConHudSdk.shared.sendTurnByTurnInfo(tbtCode: .STRAIGHT, distance: distance)
+MConHudSdk.shared.sendTurnByTurnInfo(tbtCode: turnByTurnCode, distance: distance)
 ```
 
 ## Safety Message
