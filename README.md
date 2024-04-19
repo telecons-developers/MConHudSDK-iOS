@@ -154,14 +154,14 @@ MConHudSdk.shared.sendSpeedingInfo(limitSpeed: 70, isSpeeding: true)
 ## Junction Views Message
 
 ```swift
-let JunctionViewCodes = [JunctionViewCode.SERVICE_LANE]
-MConHudSdk.shared.sendJunctionViewInfo(JunctionViewCodes: JunctionViewCodes)
+let junctionViewCodes = [JunctionViewCode.SERVICE_LANE]
+MConHudSdk.shared.sendJunctionViewInfo(JunctionViewCodes: junctionViewCodes)
 ```
 If multiple JunctionView indicators need to be displayed simultaneously, the value for JunctionViewCode should be provided as an array.
 
 ```swift
-let JunctionViewCodes = [JunctionViewCode.SERVICE_LANE, JunctionViewCode.UNDERPASS]
-MConHudSdk.shared.sendJunctionViewInfo(JunctionViewCodes: JunctionViewCodes)
+let junctionViewCodes = [JunctionViewCode.SERVICE_LANE, JunctionViewCode.UNDERPASS]
+MConHudSdk.shared.sendJunctionViewInfo(JunctionViewCodes: junctionViewCodes)
 ```
 
 ## Car Speed Message
