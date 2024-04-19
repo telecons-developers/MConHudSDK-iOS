@@ -25,7 +25,6 @@
 - [HUD Buzzer](#HUD-Buzzer)
 - [Firmware Infomation](#Firmware-Infomation)
 - [Firmware Update](#Firmware-Update)
-- [License](#License)
 
 ## Installation
 
@@ -354,9 +353,3 @@ extension ViewController: MConHudFirmwareDelegate {
   ...
 }
 ```
-
-## License
-N/A Update id needed.
-
-
-
