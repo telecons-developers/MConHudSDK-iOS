@@ -238,7 +238,7 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: MConHudDelegate {
-    func receiveHudBrightnessLevel(brightnessLevel: MConHudSDK.BrightnessLevel) {
+    func receiveHudBrightnessLevel(brightnessLevel: BrightnessLevel) {
         print("receiveHudBrightnessLevel \(brightnessLevel)")
     }
 
@@ -267,7 +267,7 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: MConHudDelegate {
-    func receiveHudBuzzerStatus(buzzerStatus: MConHudSDK.BuzzerLevel) {
+    func receiveHudBuzzerStatus(buzzerStatus: BuzzerLevel) {
         print("receiveHudBuzzerStatus \(buzzerStatus)")
     }
 
