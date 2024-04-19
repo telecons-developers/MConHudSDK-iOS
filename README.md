@@ -282,7 +282,6 @@ MConHudSdk.shared.startFirmwareUpdate(
     deviceName: "MHUD",                  // HUD의 블루투스 스캔 기기명
     version: "212201",                   // 업데이트 할 펌웨어 버전
     fileSize: 794192,                    // 펌웨어 파일의 사이즈
-    updateType: 0,                       // 펌웨어 업데이트 타입 (0: 일반 업데이트, 1: 강제 업데이트)
     crcValue: "0x5699"                   // 체크썸
 )
 ```
