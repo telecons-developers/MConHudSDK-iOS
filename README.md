@@ -23,6 +23,7 @@
 - [Time Message](#Time-Message)
 - [HUD Brightness](#HUD-Brightness)
 - [HUD Buzzer](#HUD-Buzzer)
+- [Firmware Infomation](#Firmware-Infomation)
 - [Firmware Update](#Firmware-Update)
 - [License](#License)
 
@@ -292,6 +293,27 @@ extension ViewController: MConHudDelegate {
     }
 
     ...
+}
+```
+
+## Firmware Infomation
+[MConHudFirmwareDelegate]를 통해 현재 펌웨어 정보를 받을 수 있습니다.
+```swift
+class ViewController: UIViewController {
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+    MConHudSdk.shared.hudFirmwareDelegate = self
+    MConHudSdk.shared.getFirmwareInfo()
+  }
+}
+
+extension TbtTestController: MConHudFirmwareDelegate {
+    func receiveFirmwareInfo(firmwareInfo: FirmwareInfo) {
+        // modelName: Stirng, firmwareVersion : String
+    }
+
+  ...
 }
 ```
 
