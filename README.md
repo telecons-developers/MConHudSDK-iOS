@@ -339,10 +339,6 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: MConHudFirmwareDelegate {
-    func receiveFirmwareInfo(firmwareInfo: FirmwareInfo) {
-        print("[MConHudFirmwareDelegate] receiveFirmwareInfo : \(firmwareInfo)")
-    }
-    
     func firmwareUpdate(progress: Int) {
         print("[MConHudFirmwareDelegate] prog : \(progress)")
     }
@@ -354,6 +350,8 @@ extension ViewController: MConHudFirmwareDelegate {
     func firmwareUpdateError(firmwareUpdateError: MConHudSdkError) {
         print("[MConHudFirmwareDelegate] \(firmwareUpdateError)")
     }
+
+  ...
 }
 ```
 
