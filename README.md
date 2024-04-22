@@ -38,7 +38,7 @@ Privacy - Bluetooth Peripheral Usage Description
 ```
 
 ## Auth
-AppKey 인증을 완료해 주세요.
+Need to complete AppKey process.
 
 ```swift
 MConHudSdk.shared.initialize(appKey: "appkey") { error in
@@ -120,7 +120,7 @@ extension ViewController: MConHudScanDelegate {
 ```
 
 ## Turn By Turn Message
-방향과 잔여거리를 전송합니다.
+Provide the direction (TBT) with the remaining distance.
 
 ```swift
 let turnByTurnCode: TurnByTurnCode = .STRAIGHT
@@ -145,7 +145,7 @@ MConHudSdk.shared.sendSafetyInfo(safetyCodes: safetyCodes, remainDistance: 100)
 ```
 
 ## Speeding Message
-과속 상태를 표현하는 메세지 입니다.  
+Provide the status of over speeding messgae.
 provide the speed limit and the speeding condition values to convey the message
 
 ```swift
@@ -165,7 +165,7 @@ MConHudSdk.shared.sendJunctionViewInfo(JunctionViewCodes: junctionViewCodes)
 ```
 
 ## Car Speed Message
-자차 속도 메세지 입니다.  
+The message of the current vehicle speed.
 Speed is used to represent the vehicle's velocity as an integer type.
 
 ```swift
@@ -174,14 +174,14 @@ MConHudSdk.shared.sendCarSpeed(speed: speed)
 ```
 
 ## Fuel Message
-연료타입 메세지 입니다.
+The message of the fuel type.
 
 ```swift
 MConHudSdk.shared.sendFuel(fuelCode: .FUEL_PUMP)
 ```
 
 ## Clear Message
-소등 메세지
+Message of turn off
 
 ```swift
 let clearCodes = [ClearCode.TURN_BY_TURN]
@@ -296,7 +296,7 @@ extension ViewController: MConHudDelegate {
 ```
 
 ## Firmware Infomation
-[MConHudFirmwareDelegate]를 통해 현재 펌웨어 정보를 받을 수 있습니다.
+[MConHudFirmwareDelegate] is to indicate the current information of the firmware
 ```swift
 class ViewController: UIViewController {
   override func viewDidLoad() {
@@ -319,14 +319,14 @@ extension TbtTestController: MConHudFirmwareDelegate {
 ## Firmware Update
 ```swift
 MConHudSdk.shared.startFirmwareUpdate(
-    firmwareFileURL: downloadFileURL,    // 펌웨어 파일 경로
-    deviceName: "MHUD",                  // HUD의 블루투스 스캔 기기명
-    version: "212201",                   // 업데이트 할 펌웨어 버전
-    fileSize: 794192,                    // 펌웨어 파일의 사이즈
-    crcValue: "0x5699"                   // 체크썸
+    firmwareFileURL: downloadFileURL,    // Firmware file path
+    deviceName: "MHUD",                  // Scanned device name by BT for HUD
+    version: "212201",                   // Scanned device name by BT for HUD
+    fileSize: 794192,                    // Firmware file size to be updated
+    crcValue: "0x5699"                   // checksum
 )
 ```
-[MConHudFirmwareDelegate]를 통해 현재 펌웨어 정보와 펌웨어 업데이트 진행 및 완료 상태를 받을 수 있습니다.
+[MConHudFirmwareDelegate] is to indicate the progress and complete status of the firmware update
 
 ```swift
 class ViewController: UIViewController {
